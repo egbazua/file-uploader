@@ -7,6 +7,7 @@ import {
   Input,
   Container,
   Heading,
+  Button,
 } from '@chakra-ui/react';
 
 const App = () => {
@@ -21,6 +22,7 @@ const App = () => {
             <FormHelperText>Enter your title.</FormHelperText>
             <Input type='file' mt='3' />
             <FormHelperText>Upload your file.</FormHelperText>
+            <Button colorScheme='teal' type='submit' mt='3' >Submit</Button>
           </FormControl>
         </Container>
       </Center>
