@@ -15,13 +15,13 @@ const client = new S3Client({
     }
 });
 
-const uploadFile = async(pathFile) => {
+const uploadFile = async(file) => {
 
-    const stream = fs.createReadStream(pathFile);
+    const stream = fs.createReadStream(file.tempFilePath);
 
     const uploadParams = {
         Bucket: AWS_BUCKET_NAME,
-        Key: 'file',
+        Key: file.name,
         Body: stream,
     }
 
