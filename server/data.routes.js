@@ -10,7 +10,7 @@ router.post('/upload', async(req, res) => {
 
     console.log(req.files['data'].tempFilePath);
 
-    const result = await uploadFile(req.files['data'].tempFilePath);
+    const result = await uploadFile(req.files['data']);
     console.log(result);
     
     res.send('File uploaded!');
